@@ -17,6 +17,7 @@
 #-------Libraries-------
 from scipy.io.wavfile import read
 import channel_sim as CS
+import tools
 #--------------------------
 
 print("Options: -n (channel simulation), -a (graphs amplitude), -psd (graphs PSD) -fa (full analysis)")
@@ -35,10 +36,10 @@ if ("-n" in selection.split(" ")):
     input_signal = CS.ChannelSim(input_signal)
     
 if ("-a" in selection.split(" ")):
-    CS.Osciloscope(input_signal)
+    tools.Osciloscope(input_signal)
 
 if ("-psd" in selection.split(" ")):
-    CS.GraphPSD(input_signal)
+    tools.GraphPSD(input_signal)
     
 if ("-fa" in selection.split(" ")):    
-    CS.FullAnalisis(input_signal)
+    tools.FullAnalisis(input_signal)
