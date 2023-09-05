@@ -1,17 +1,17 @@
 #-------General Information-------
-#Tecnol√≥gico de Costa Rica
-#Escuela de Electr√≥nica
+#Tecnológico de Costa Rica
+#Escuela de Electrónica
 #
-#Curso EL-5513 Comunicaciones El√©ctricas 1
-#Prof. Laura Cabrera Quir√≥s
+#Curso EL-5513 Comunicaciones Eléctricas 1
+#Prof. Laura Cabrera Quirós
 #
-# Proyecto Programado: Sistema de modulacion y demodulaci√≥n anal√≥gico
-# Etapa 1: Simulador de Ruido y Herramientas Miscel√°neas 
+# Proyecto Programado: Sistema de modulación y demodulación analógico
+# Etapa 1: Simulador de Ruido y Herramientas Misceláneas 
 #
 #Elaborado por:
 #-Alexander Castro Lara 2017153854
-#-Gabriel Hern√°ndez Calder√≥n 2017238935
-#-Josu√© Rojas Gonz√°lez 2017112581
+#-Gabriel Hernández Calderón
+#-Josué Rojas González 2017112581
 #-------------------------------------------
 
 #-------Libraries-------
@@ -22,6 +22,7 @@ import tools
 
 print("Options: -n (channel simulation), -a (graphs amplitude), -psd (graphs PSD) -fa (full analysis)")
 print("Please type the name of your file followed by the operation you wish to execute")
+print("E.g.: tono.wav -psd")
 print("DO NOT SELECT MORE THAN ONE GRAPH OPTION")
 selection = input("Please input operation instruction:\n")
 
