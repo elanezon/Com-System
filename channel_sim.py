@@ -17,22 +17,13 @@
 
 
 #-------Libraries-------
-from scipy.io.wavfile import read
 import matplotlib.pyplot as plot
 import numpy as np
 #--------------------------
-print("Options: -n (chanel simulation), -a (graphs amplitude), -psd (graphs PSD) -fa (full analysis)")
-selection = input("Please input operation instruction:\n")
-
-input_file = selection.split(" ")[0]
-
-#-------Load Audio-------
-input_wave = read(input_file)##Opens .wav file and extracts data
-input_signal = input_wave[1]
-#------------------------------
 
 
-def ChanelSim(signal):
+
+def ChannelSim(signal):
     noise=np.random.normal(0, 0.1, signal.shape[0]) ##Creates Gaussian Noise with STD = 0,1
 
     signal_noise = signal+noise ##adds noise to original signal
@@ -140,14 +131,3 @@ def FullAnalisis(signal):
     plot.clf()
     
 
-if ("-n" in selection.split(" ")):
-    input_signal = ChanelSim(input_signal)
-    
-if ("-a" in selection.split(" ")):
-    Osciloscope(input_signal)
-
-if ("-psd" in selection.split(" ")):
-    GraphPSD(input_signal)
-    
-if ("-fa" in selection.split(" ")):    
-    FullAnalisis(input_signal)
