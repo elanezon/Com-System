@@ -1,17 +1,17 @@
 #-------General Information-------
-#Tecnol√≥gico de Costa Rica
-#Escuela de Electr√≥nica
+#Tecnológico de Costa Rica
+#Escuela de Electrónica
 #
-#Curso EL-5513 Comunicaciones El√©ctricas 1
-#Prof. Laura Cabrera Quir√≥s
+#Curso EL-5513 Comunicaciones Eléctricas 1
+#Prof. Laura Cabrera Quirós
 #
-# Proyecto Programado: Sistema de modulacion y demodulaci√≥n anal√≥gico
-# Etapa 1: Simulador de Ruido y Herramientas Miscel√°neas 
+# Proyecto Programado: Sistema de modulación y demodulación analógico
+# Etapa 1: Simulador de Ruido y Herramientas Misceláneas 
 #
 #Elaborado por:
 #-Alexander Castro Lara 2017153854
-#-Gabriel Hern√°ndez Calder√≥n
-#-Josu√© Rojas Gonz√°lez 2017112581
+#-Gabriel Hernández Calderón
+#-Josué Rojas González 2017112581
 #-------------------------------------------
 
 
@@ -25,9 +25,13 @@ def Osciloscope(signal):
     plot.plot(signal[0:1024])
     plot.ylabel("Amplitude")
     plot.xlabel("Time")
-    
+    plot.tight_layout()
+    plot.show()
+
 def GraphPSD(signal):
     plot.psd(signal)##Plots Signal PSD
+    plot.tight_layout()
+    plot.show()
     
 def FullAnalisis(signal):
     #-------Graphics windows conditioning-------
